@@ -26,7 +26,7 @@ h2{
 nav ul{
     background-color: var(--header);
     list-style-type: none;
-    margin: 10px;
+    margin: 8px;
     padding: 8px;
     display: flex;
     justify-content: space-between;
@@ -45,29 +45,38 @@ nav a {
 li a:hover {
     background-color: var(--hover);
   }
-  
 
 body {
     background-color: var(--bg);
     color: var(--text)
   }
 
-section {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-}
-.container {
-    display: grid;
-}
-  
 .profile-pic {
     float: left;
     padding: 10px 12px;
     width: 100px;
     height: 120px
 
+}
+
+.container {
+    display: flex;
+  }
+
+.box {
+    display: flex;
+  }
+
+.one {
+    flex: 2 2 2;
+}
+
+.two {
+    flex: 1 1 1;
+}
+
+.three {
+    flex: 1 1 1;
 }
 
 .contact ul{
@@ -93,76 +102,9 @@ footer {
 }
 
   
-@media screen and (max-width: 768px) {
-    header {
-      flex-direction: column;
+@media screen and (max-width: 600px){
+    .column {
+      flex: 100%;
+      max-width: 100%;
     }
-  
-    main {
-      max-width: 1200px;
-    }
-  }
-
-/*::selection{
-    background-color: var(--highlight);
-    color: black
-  }
-  
-
-  main{
-    width: 100%;
-    margin: 20px auto;
-  }
-  
-  .container {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-  }
-  
-  .card {
-    margin: 30px 10px;
-    padding: 10px;
-    width: 30%;
-  
-  }
-  
-  .card-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    color: var(--text);
-    padding: 20px;
-    outline: dashed var(--li-text);
-    outline-offset: -2px;
-    min-height: 100%;
-  }
-  
-  .card-header{
-    position: relative;
-    bottom: 35px;
-    margin: 0 auto;
-    padding: 5px 10px;
-    background-color: var(--bg);
-    border: 2px solid var(--li-text);
-    border-radius: 8px;
-  }
-  
-  .card-content:hover,
-  .card-content:hover .card-header {
-    box-shadow: 0px 0px 8px var(--text), inset 0px 0px 15px var(--text),  ;
-  }
-  
-  .code-block{
-    white-space: pre-wrap;
-    overflow: auto;
-    padding: 20px;
-    color: var(--li-text);
-    background-image: linear-gradient(black 0%, pink 100%);
-    border-radius: 8px;
-  }
-  
-  pre:active {
-    user-select: all; 
-  }
+}
